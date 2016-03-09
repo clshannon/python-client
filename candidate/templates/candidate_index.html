@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<title>Test Profile Page</title>
+	</head>
+	<body>
+		<h1 id="my_h1">Test Profile Page</h1>
+
+		  
+		<table border=1>
+			<tr>
+				<td>ErrorCode:</td>
+				<td colspan=2>{{ profile.errorCode }}</td>
+			</tr>
+			<tr>
+				<td>Username:</td>
+				<td>{{ profileData.username }}</td>
+			</tr>
+			<tr>
+				<td>Name:</td>
+				<td>{{ profileData.name }}</td>
+			</tr>
+			<tr>
+				<td>Surname:</td>
+				<td>{{ profileData.surname }}</td>
+			</tr>
+			<tr>
+				<td>Bio:</td>
+				<td>{{ profileData.bio }}</td>
+			</tr>
+			<tr>
+				<td colspan=3>Notes</td>
+			</tr>
+				<td>Title</td>
+				<td>Description</td>
+			</tr>
+			
+			{% for note in profileData.notes %}
+				<tr>
+					<td>{{ note.title }}</td>
+					<td>{{ note.title }}</td>
+				</tr>
+
+			{% endfor %}			
+			
+		</table>
+	</body> 
+</html>
