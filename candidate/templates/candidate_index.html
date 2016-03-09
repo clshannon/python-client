@@ -5,6 +5,9 @@
 	<body>
 		<h1 id="my_h1">Test Profile Page</h1>
 
+		{% if profileData.errorCode == 404 %}
+		  <p><font color="red">{{ profileData.errorMsg }}</font></p>
+		{% endif %}
 		  
 		<table border=1>
 			<tr>
